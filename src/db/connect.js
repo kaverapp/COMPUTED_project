@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import {DB_NMAE} from "../constants.js";
 
-let CONNECTION_url=process.env.MONGODB_url;
 
 const connectDB=async()=>{
     try {
