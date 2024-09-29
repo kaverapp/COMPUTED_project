@@ -9,11 +9,12 @@ import fs from "fs";
         api_secret: process.env.CLOUDINARY_API_SECRET, // Click 'View API Keys' above to copy your API secret
     });
     
-(async function(localFilePath) {
+const uploadOnCloudinary=async(localFilePath)=>{
     
-    if(!localFilePath) return null;
     // Upload an image
     try {
+        if(!localFilePath) return null;
+
         const uploadResult = await cloudinary.uploader
        .upload(
                localFilePath, {
@@ -52,4 +53,6 @@ import fs from "fs";
     // });
     
     // console.log(autoCropUrl);    
-})();
+
+}
+export {uploadOnCloudinary};

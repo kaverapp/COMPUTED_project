@@ -35,7 +35,7 @@ const userSchema=new mongoose.Schema({
     coverImg:{
         type:String,    //cloudinary url
     },
-    watchGistory:{
+    watchistory:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Video"
     },
