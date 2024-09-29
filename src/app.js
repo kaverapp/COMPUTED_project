@@ -22,8 +22,13 @@ app.use(cors({
 app.use(express.static("public"))
 app.use(cookieParser());
 
-app.get("/",(req,res)=>{
-    
-})
+
+//routes import
+import userRouter from "./routes/user.routes.js";
+
+
+//routes declaration
+
+app.use("/api/v1/users",userRouter)   //here /api/v1/users is an prefix when u enter ths url in browser the control will be sent to theusrRouter
 
 export {app};

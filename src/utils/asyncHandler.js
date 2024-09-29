@@ -1,5 +1,7 @@
-const asyncHandler=(requestHandler)=>{
-    (req,res,next)=>{
+//this is an wrapper where we dont have to add try and catch  block for all the blck
+
+const asyncHandler=(requestHandler)=>{                 //highr order function
+    return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next))
         .catch((err)=>next(err));
     }
