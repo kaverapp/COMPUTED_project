@@ -21,7 +21,7 @@ const userSchema=new mongoose.Schema({
         unique:true,
         lowercase:true,
         trim:true,
-    },
+    },  
     fullname:{
         type:String,
         required:true,
@@ -41,7 +41,7 @@ const userSchema=new mongoose.Schema({
     },
     refreshToken:{
         type:String,
-    }
+    } 
 },{timestamps:true});
 
 userSchema.pre("save",async function(next){
